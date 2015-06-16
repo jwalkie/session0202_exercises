@@ -1,3 +1,4 @@
+##Julianne Walkiewicz
 1. x = 5
 2. String
 3. No, it is an int
