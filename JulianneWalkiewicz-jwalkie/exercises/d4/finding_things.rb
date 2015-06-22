@@ -16,7 +16,8 @@ def find_by_name(array, name)
 		end
 	end
 end
-
+people = [{name: "Brian"}, {name: "Erica"}, {name: "Brian"}]
+find_by_name(people, "Brian")
 
 
 def filter_by_name(array_of_hashes, name)
@@ -28,8 +29,7 @@ def filter_by_name(array_of_hashes, name)
 	end
 	puts result
 end
-# people = [{name: "Brian"}, {name: "Erica"}, {name: "Brian"}]
-# puts find_by_name(people, "Brian")
+
 
 
 people = [
