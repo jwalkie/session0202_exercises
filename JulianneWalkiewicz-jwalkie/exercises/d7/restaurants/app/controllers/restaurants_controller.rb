@@ -26,5 +26,5 @@ class RestaurantsController < ApplicationController
 		@area = @food_type_hash[:area]
 		@img = @food_type_hash[:img]
 	end
-		
+	
 end

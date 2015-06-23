@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/restaurants/:restaurant', to: 'restaurants#restaurant', as: 'restaurant'
 
 
+
   
 
 

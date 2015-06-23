@@ -3,10 +3,22 @@ body {
 	text-align: center;
 	font-family: Oswald;
 }
+
+a:link {
+	color: black;
+	text-decoration: none;
+}
+a:visited {
+	color: black;
+	text-decoration: none;
+}
+a:hover {
+	color: rgba(0, 0, 0, .2);
+}
 </style>
 <body>
 	<h1><%= @restaurant %></h1>
 	<p>Neighborhood: <%= @area %></p>
-	<img src="<%= @img %>" width = "400"><br> 
+	<div><img src="<%= @img %>" width = "400"></div><br> 
 	<%= link_to 'Back', restaurants_path %>
 </body>

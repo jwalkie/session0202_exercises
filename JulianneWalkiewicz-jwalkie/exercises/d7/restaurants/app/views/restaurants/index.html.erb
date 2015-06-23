@@ -1,14 +1,25 @@
 <style>
 body {
-	text-align: left;
+	text-align: center;
 	font-family: Oswald;
+}
+a:link {
+	color: black;
+	text-decoration: none;
+}
+a:visited {
+	color: black;
+	text-decoration: none;
+}
+a:hover {
+	color: rgba(0, 0, 0, .2);
 }
 </style>
 <body>
-<ul>
+<h1>The Restaurants: </h1>
 <% @restaurant_list.each do |restaurant| %>
-	<li><%= link_to restaurant, restaurant_path(:restaurant => restaurant) %></li>
-<% end %>
-<ul>
-<%= link_to 'Back', '/' %>
+	<%= link_to restaurant, restaurant_path(:restaurant => restaurant) %><br>
+<% end %><br>
+
+<%= link_to 'Home', '/' %>
 <body>
