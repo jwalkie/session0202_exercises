@@ -1,0 +1,14 @@
+<style>
+body {
+	text-align: left;
+	font-family: Oswald;
+}
+</style>
+<body>
+<ul>
+<% @restaurant_list.each do |restaurant| %>
+	<li><%= link_to restaurant, restaurant_path(:restaurant => restaurant) %></li>
+<% end %>
+<ul>
+<%= link_to 'Back', '/' %>
+<body>
