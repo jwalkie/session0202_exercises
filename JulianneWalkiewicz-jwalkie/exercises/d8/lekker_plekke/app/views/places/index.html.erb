@@ -1,0 +1,9 @@
+<h1>List of Lekker Plekke in Cape Town!</h1>
+<%= link_to 'New Place', new_place_path %>
+<ul>
+	<% @places.each do |place| %>
+		<li><%= link_to place.name, place_path(place)%> |
+		<%= link_to "Edit", edit_place_path(place)%> | 
+		<%= link_to "Delete", place_path(place), method: :delete, data: { confirm: 'Are you sure?' } %></li>
+	<% end %>
+</ul>

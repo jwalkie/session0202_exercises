@@ -6,7 +6,7 @@
 				<%= pluarlize(@article.errors.count, "error") %> prohibited this article form being saved:
 			</h2>
 			<ul>
-				<% @articl.errors.full_messages.each do |msg| %>
+				<% @article.errors.full_messages.each do |msg| %>
 					<li><%= msg %></li>
 				<% end %>
 			</ul>
