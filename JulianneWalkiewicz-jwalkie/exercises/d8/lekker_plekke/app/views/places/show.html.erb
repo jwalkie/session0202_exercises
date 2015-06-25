@@ -1,0 +1,10 @@
+<h1><%= @place.name %></h1>
+<ul>
+	<li>Location: <%= @place.location %></li>
+	<li>Nice weather necessary? <%= @place.weather_dependent %></li>
+</ul>
+<%= link_to 'Back', places_path %>
+<%= link_to 'Edit', edit_place_path %>
+<%= link_to 'Delete', place_path(@place), 
+						method: :delete,
+ 						data: { confirm: 'Are you sure?' } %>
