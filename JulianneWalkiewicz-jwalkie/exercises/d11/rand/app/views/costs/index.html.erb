@@ -1,0 +1,7 @@
+<h1>Listing Costs</h1>
+<ul>
+	<% @costs.each do |cost| %>
+		<li><%= cost.name %></li>
+		<li><%= cost.price %></li>
+	<% end %>
+</ul>
