@@ -1,0 +1,11 @@
+<%= form_for([@user, @user.costs.build]) do |f| %>
+	<div>
+		<%= f.label :name %>
+		<%= f.text_field :name, :placeholder => 'What did you spend your rand on?', :size => 30 %>
+	</div>
+	<div>
+		<%= f.label :price %>
+		<%= f.text_field :price, :placeholder => '150 (number of rands)', :size => 30 %>
+	</div>
+	<%= f.submit %>
+<% end %>
