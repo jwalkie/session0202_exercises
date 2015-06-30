@@ -1,10 +1,11 @@
-<h1>Listing Costs for <%= current_user.email %></h1>
+<h1>Listing your costs:</h1>
+<%= link_to 'Add a cost', new_user_cost_path %>
 <ul>
 	<% @costs.each do |cost| %>
-		<li><%= link_to cost.name, user_cost_path(@user, cost)%></li>
+		<li><%= link_to cost.name, user_cost_path(current_user, cost)%></li>
 	<% end %>
 </ul>
-<%= link_to 'Add a cost', new_user_cost_path %>
+
 <p class="navbar-text pull-right">
 
 <% if user_signed_in? %>

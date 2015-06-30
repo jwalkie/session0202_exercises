@@ -1,28 +1,23 @@
 class CostsController < ApplicationController
+	before_action :authenticate_user!
 	def index
-		@user = current_user
-		@costs = @user.costs
+		@costs = Cost.all
 	end
 	def show
-		@user = current_user
-		@cost = @user.costs.find(params[:id])
+		@cost = Cost.find(params[:id])
 	end
 	def new
-		@user = current_user
-		@cost = @user.costs.new
+		@cost = Cost.new
 	end
 	def edit
-		@user = current_user
-		@cost = @user.costs.find(params[:id])
+		@cost = Cost.find(params[:id])
 	end
 	def create
-		@user = current_user
-		@cost = @user.costs.create(cost_params)
-		redirect_to user_costs_path
+		@cost = Cost.create(cost_params)
+		redirect_to user_costs_path, notice: "Cost successfully created."
 	end
 	def update
-		@user = current_user
-		@cost = @user.costs.find(params[:id])
+		@cost = Cost.find(params[:id])
 		if @cost.update(cost_params)
 			redirect_to @cost
 		else
@@ -30,8 +25,7 @@ class CostsController < ApplicationController
 		end
 	end
 	def destroy
-		@user = current_user
-		@cost = @user.costs.find(params[:id])
+		@cost = Cost.find(params[:id])
 		@cost.destroy
 		redirect_to user_costs_path
 	end
